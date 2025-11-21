@@ -8,7 +8,7 @@ import { products as mockProducts, collections } from "@/data/products";
 import { useShopifyProducts } from "@/hooks/useShopifyProducts";
 import { useWishlist } from "@/contexts/WishlistContext";
 import { useProductReviews } from "@/hooks/useProductReviews";
-import heroImage from "@/assets/hero-living-room.jpg";
+import heroImage from "@/assets/hero-body-care.jpg";
 
 const Index = () => {
   const { toggleWishlist, isWishlisted } = useWishlist();

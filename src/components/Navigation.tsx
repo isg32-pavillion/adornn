@@ -21,11 +21,11 @@ const Navigation = () => {
 
   const navigationItems = [
     { name: "Shop All", href: "/shop" },
-    { name: "Living Room", href: "/shop/living-room" },
-    { name: "Bedroom", href: "/shop/bedroom" },
-    { name: "Kitchen", href: "/shop/kitchen" },
-    { name: "Office", href: "/shop/office" },
-    { name: "Style Quiz", href: "/style-quiz" },
+    { name: "Bath & Body", href: "/shop/bath-and-body" },
+    { name: "Skincare", href: "/shop/skincare" },
+    { name: "Hair Care", href: "/shop/hair-care" },
+    { name: "Wellness", href: "/shop/wellness" },
+    { name: "Beauty Quiz", href: "/style-quiz" },
   ];
 
   const isActive = (href: string) => location.pathname === href;
@@ -34,7 +34,7 @@ const Navigation = () => {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50">
       {/* Top notification bar - full width */}
       <div className="py-2 text-center text-sm bg-gradient-hero text-primary-foreground w-full">
-        Free shipping on orders over $75 • Style Quiz: Find your perfect pieces
+        Free shipping on orders over $75 • Beauty Quiz: Find your perfect routine
       </div>
       
       <div className="container mx-auto px-4">
@@ -42,7 +42,7 @@ const Navigation = () => {
         <nav className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link to="/" className="font-playfair text-2xl font-semibold text-primary">
-            Havenly Home
+            Pure Bliss Body
           </Link>
 
           {/* Desktop Navigation */}
@@ -68,7 +68,7 @@ const Navigation = () => {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
                   type="search"
-                  placeholder="Search home decor..."
+                  placeholder="Search body care products..."
                   className="pl-10 w-64 bg-secondary/50 border-border/50 focus:bg-background"
                 />
               </div>
@@ -164,7 +164,7 @@ const Navigation = () => {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
                   type="search"
-                  placeholder="Search home decor..."
+                  placeholder="Search body care products..."
                   className="pl-10 bg-secondary/50 border-border/50"
                 />
               </div>

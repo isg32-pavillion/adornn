@@ -100,62 +100,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-playfair text-3xl font-medium text-primary mb-4">
-              Why Choose Adornn
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Experience the perfect blend of ancient Ayurvedic wisdom and modern wellness
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Sprout className="h-10 w-10 text-primary-foreground" />
-              </div>
-              <h3 className="font-semibold text-lg text-foreground mb-2">100% Natural Ingredients</h3>
-              <p className="text-sm text-muted-foreground">
-                Crafted with pure herbal extracts and traditional Ayurvedic formulations, free from harmful chemicals
-              </p>
-            </div>
-
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Award className="h-10 w-10 text-primary-foreground" />
-              </div>
-              <h3 className="font-semibold text-lg text-foreground mb-2">Time-Tested Recipes</h3>
-              <p className="text-sm text-muted-foreground">
-                Formulated using centuries-old Ayurvedic wisdom passed down through generations of experts
-              </p>
-            </div>
-
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <CheckCircle2 className="h-10 w-10 text-primary-foreground" />
-              </div>
-              <h3 className="font-semibold text-lg text-foreground mb-2">Quality Assured</h3>
-              <p className="text-sm text-muted-foreground">
-                Every product is carefully tested and certified to ensure safety, purity, and effectiveness
-              </p>
-            </div>
-
-            <div className="text-center group">
-              <div className="w-20 h-20 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Droplets className="h-10 w-10 text-primary-foreground" />
-              </div>
-              <h3 className="font-semibold text-lg text-foreground mb-2">Holistic Wellness</h3>
-              <p className="text-sm text-muted-foreground">
-                More than just products—experience complete body, mind, and soul rejuvenation
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Featured Products */}
       <section className="py-16">
         <div className="container mx-auto px-4">

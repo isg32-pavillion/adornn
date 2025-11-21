@@ -5,7 +5,6 @@ const SHOPIFY_API_VERSION = '2025-07';
 const SHOPIFY_STORE_PERMANENT_DOMAIN = 'lovable-project-m5qu5.myshopify.com';
 const SHOPIFY_STOREFRONT_URL = `https://${SHOPIFY_STORE_PERMANENT_DOMAIN}/api/${SHOPIFY_API_VERSION}/graphql.json`;
 const SHOPIFY_STOREFRONT_TOKEN = '17ee754a632e2bc2c4b4f4d7162b3d7e';
-const USD_TO_INR_RATE = 83; // Conversion rate from USD to INR
 
 export interface ShopifyProduct {
   node: {
@@ -163,8 +162,7 @@ export function convertShopifyProduct(shopifyProduct: ShopifyProduct, category: 
   // Extract numeric ID from GraphQL ID
   const id = node.id.split('/').pop() || node.handle;
   
-  // Convert price from USD to INR
-  const price = parseFloat(node.priceRange.minVariantPrice.amount) * USD_TO_INR_RATE;
+  const price = parseFloat(node.priceRange.minVariantPrice.amount);
   
   // Get image from our mapping or use first Shopify image or placeholder
   const productImage = productImageMap[node.handle] || 

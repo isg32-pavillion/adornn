@@ -42,7 +42,7 @@ const Navigation = () => {
         <nav className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link to="/" className="font-playfair text-2xl font-semibold text-primary">
-            Pure Bliss Body
+            Adornn
           </Link>
 
           {/* Desktop Navigation */}

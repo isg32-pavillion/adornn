@@ -1,4 +1,4 @@
-import { Heart, Star, BarChart3 } from "lucide-react";
+import { Heart, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -14,19 +14,13 @@ interface ProductCardProps {
   reviewData?: ProductReviewSummary;
   onToggleWishlist?: (productId: string) => void;
   isWishlisted?: boolean;
-  onAddToComparison?: (product: Product) => void;
-  isInComparison?: boolean;
-  canAddToComparison?: boolean;
 }
 
 const ProductCard = ({ 
   product, 
   reviewData,
   onToggleWishlist, 
-  isWishlisted = false,
-  onAddToComparison,
-  isInComparison = false,
-  canAddToComparison = true
+  isWishlisted = false
 }: ProductCardProps) => {
   const { addItem } = useCart();
   const { toast } = useToast();
@@ -76,8 +70,8 @@ const ProductCard = ({
           )}
         </div>
 
-        {/* Wishlist and Compare Buttons */}
-        <div className="absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        {/* Wishlist Button */}
+        <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <Button
             variant="ghost"
             size="icon"
@@ -93,36 +87,6 @@ const ProductCard = ({
               }`}
             />
           </Button>
-          
-          {onAddToComparison && (
-            <Button
-              variant="ghost"
-              size="icon"
-              className={`bg-background/80 hover:bg-background ${
-                isInComparison ? "bg-primary/20" : ""
-              }`}
-              onClick={(e) => {
-                e.preventDefault();
-                if (!isInComparison && canAddToComparison) {
-                  onAddToComparison(product);
-                }
-              }}
-              disabled={isInComparison || !canAddToComparison}
-              title={
-                isInComparison 
-                  ? "Already in comparison" 
-                  : !canAddToComparison 
-                    ? "Comparison limit reached" 
-                    : "Add to compare"
-              }
-            >
-              <BarChart3
-                className={`h-4 w-4 transition-colors ${
-                  isInComparison ? "text-primary" : "text-muted-foreground"
-                }`}
-              />
-            </Button>
-          )}
         </div>
 
         {/* Quick Add Button */}

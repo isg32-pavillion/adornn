@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Filter, SlidersHorizontal, BarChart3, Eye, ArrowRight } from "lucide-react";
+import { Filter, SlidersHorizontal, Eye, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -13,16 +13,13 @@ import {
 } from "@/components/ui/select";
 import ProductCard from "@/components/ProductCard";
 import AdvancedFilters, { FilterState } from "@/components/AdvancedFilters";
-import ProductComparison from "@/components/ProductComparison";
 import RecentlyViewed from "@/components/RecentlyViewed";
 import SearchInput from "@/components/SearchInput";
 import { products as mockProducts, getProductsByStyle, Product } from "@/data/products";
 import { useShopifyProducts } from "@/hooks/useShopifyProducts";
-import { useProductComparison } from "@/hooks/useProductComparison";
 import { useProductReviews } from "@/hooks/useProductReviews";
 import { useWishlist } from "@/contexts/WishlistContext";
 import { searchProducts, getSearchStats } from "@/lib/searchUtils";
-import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 
 const Shop = () => {
@@ -45,17 +42,7 @@ const Shop = () => {
     tags: []
   });
 
-  const { 
-    comparisonProducts, 
-    addToComparison, 
-    removeFromComparison, 
-    clearComparison, 
-    canAddToComparison,
-    isInComparison 
-  } = useProductComparison();
-  
   const { wishlistItems, toggleWishlist, isWishlisted } = useWishlist();
-  const { toast } = useToast();
 
   const categories = ["All", "Lighting", "Textiles", "Decor", "Wall Art"];
   const rooms = ["All", "Living Room", "Bedroom", "Kitchen", "Office"];
@@ -176,16 +163,6 @@ const Shop = () => {
     });
   };
 
-  const handleAddProductToComparison = (product: Product) => {
-    if (canAddToComparison()) {
-      addToComparison(product);
-      toast({
-        title: "Added to comparison",
-        description: `${product.name} has been added to comparison.`,
-      });
-    }
-  };
-
   const activeFiltersCount = [
     searchQuery !== "",
     selectedCategory !== "all",
@@ -218,21 +195,12 @@ const Shop = () => {
 
         {/* Tabs for different views */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-8">
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-3 mt-2">
+          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mt-2">
             <TabsTrigger value="products" className="flex items-center gap-2">
               Products
               <Badge variant="secondary" className="ml-1 hidden sm:inline-flex">
                 {filteredProducts.length}
               </Badge>
-            </TabsTrigger>
-            <TabsTrigger value="compare" className="flex items-center gap-2">
-              <BarChart3 className="h-4 w-4 hidden sm:block" />
-              Compare
-              {comparisonProducts.length > 0 && (
-                <Badge variant="secondary" className="ml-1 hidden sm:inline-flex">
-                  {comparisonProducts.length}
-                </Badge>
-              )}
             </TabsTrigger>
             <TabsTrigger value="recommended" className="flex items-center gap-2">
               <Eye className="h-4 w-4 hidden sm:block" />
@@ -366,9 +334,6 @@ const Shop = () => {
                   reviewData={getProductReviews(product.id)}
                   onToggleWishlist={toggleWishlist}
                   isWishlisted={isWishlisted(product.id)}
-                  onAddToComparison={handleAddProductToComparison}
-                  isInComparison={isInComparison(product.id)}
-                  canAddToComparison={canAddToComparison()}
                 />
               ))}
             </div>
@@ -392,13 +357,6 @@ const Shop = () => {
             )}
           </TabsContent>
 
-          <TabsContent value="compare">
-            <ProductComparison
-              products={comparisonProducts}
-              onRemoveProduct={removeFromComparison}
-              onSwitchToProducts={() => setActiveTab("products")}
-            />
-          </TabsContent>
 
           <TabsContent value="recommended" className="space-y-8">
             {styleRecommendations.length > 0 ? (
@@ -419,9 +377,6 @@ const Shop = () => {
                       reviewData={getProductReviews(product.id)}
                       onToggleWishlist={toggleWishlist}
                       isWishlisted={isWishlisted(product.id)}
-                      onAddToComparison={handleAddProductToComparison}
-                      isInComparison={isInComparison(product.id)}
-                      canAddToComparison={canAddToComparison()}
                     />
                   ))}
                 </div>

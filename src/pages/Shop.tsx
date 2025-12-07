@@ -36,7 +36,7 @@ const Shop = () => {
   const [sortBy, setSortBy] = useState("featured");
   const [activeTab, setActiveTab] = useState("products");
   const [advancedFilters, setAdvancedFilters] = useState<FilterState>({
-    priceRange: [0, 500],
+    priceRange: [0, 5000],
     categories: [],
     rooms: [],
     styles: [],
@@ -61,10 +61,10 @@ const Shop = () => {
   const rooms = ["All", "Living Room", "Bedroom", "Kitchen", "Office"];
   const priceRanges = [
     { label: "All Prices", value: "all" },
-    { label: "Under $50", value: "0-50" },
-    { label: "$50 - $100", value: "50-100" },
-    { label: "$100 - $200", value: "100-200" },
-    { label: "Over $200", value: "200+" },
+    { label: "Under ₹500", value: "0-500" },
+    { label: "₹500 - ₹1000", value: "500-1000" },
+    { label: "₹1000 - ₹2000", value: "1000-2000" },
+    { label: "Over ₹2000", value: "2000+" },
   ];
 
   const sortOptions = [
@@ -118,8 +118,8 @@ const Shop = () => {
     }
     if (priceRange !== "all") {
       const [min, max] = priceRange.split("-").map(Number);
-      if (priceRange === "200+") {
-        return product.price > 200;
+      if (priceRange === "2000+") {
+        return product.price > 2000;
       }
       return product.price >= min && product.price <= max;
     }
@@ -166,7 +166,7 @@ const Shop = () => {
     setPriceRange("all");
     setSortBy("featured");
     setAdvancedFilters({
-      priceRange: [0, 500],
+      priceRange: [0, 5000],
       categories: [],
       rooms: [],
       styles: [],

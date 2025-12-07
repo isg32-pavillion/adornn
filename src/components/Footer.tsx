@@ -23,11 +23,8 @@ const Footer = () => {
               <Link to="/faq" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 FAQ
               </Link>
-              <Link to="/returns" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Returns & Exchanges
-              </Link>
               <Link to="/shipping" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Shipping & Returns
+                Shipping Info
               </Link>
             </nav>
           </div>
@@ -39,11 +36,8 @@ const Footer = () => {
               <Link to="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 About Us
               </Link>
-              <Link to="/size-guide" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Size Guides
-              </Link>
               <Link to="/care" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Care Instructions
+                Product Care
               </Link>
             </nav>
           </div>

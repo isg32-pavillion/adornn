@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { ChevronLeft, Heart, Share2, ShoppingCart, Star, Truck, Shield, RotateCcw, BarChart3 } from "lucide-react";
+import { ChevronLeft, Heart, Share2, ShoppingCart, Star, Truck, Shield, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -11,7 +11,7 @@ import ProductReviews from "@/components/ProductReviews";
 import RelatedProducts from "@/components/RelatedProducts";
 import SocialShare from "@/components/SocialShare";
 import { useRecentlyViewed } from "@/hooks/useRecentlyViewed";
-import { useProductComparison } from "@/hooks/useProductComparison";
+
 import { useCart } from "@/contexts/CartContext";
 import { useWishlist } from "@/contexts/WishlistContext";
 import { useReviews } from "@/hooks/useReviews";
@@ -24,7 +24,7 @@ const ProductDetail = () => {
   const [quantity, setQuantity] = useState(1);
 
   const { addToRecentlyViewed } = useRecentlyViewed();
-  const { addToComparison, isInComparison, canAddToComparison } = useProductComparison();
+  
   const { addItem } = useCart();
   const { isWishlisted, toggleWishlist } = useWishlist();
   const { products: shopifyProducts, isLoading } = useShopifyProducts();
@@ -84,21 +84,6 @@ const ProductDetail = () => {
     toggleWishlist(product.id);
   };
 
-  const handleAddToComparison = () => {
-    if (canAddToComparison()) {
-      addToComparison(product);
-      toast({
-        title: "Added to Comparison",
-        description: `${product.name} has been added to your comparison list.`,
-      });
-    } else {
-      toast({
-        title: "Comparison Full",
-        description: "You can only compare up to 3 products at a time.",
-        variant: "destructive",
-      });
-    }
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -252,15 +237,6 @@ const ProductDetail = () => {
                 >
                   <Heart className={`h-4 w-4 ${isWishlisted(product.id) ? "fill-current" : ""}`} />
                 </Button>
-                <Button
-                  variant="outline"
-                  onClick={handleAddToComparison}
-                  disabled={!canAddToComparison() || isInComparison(product.id)}
-                  size="lg"
-                  title={isInComparison(product.id) ? "Already in comparison" : "Add to comparison"}
-                >
-                  <BarChart3 className="h-4 w-4" />
-                </Button>
                 <SocialShare product={product} />
               </div>
             </div>
@@ -271,7 +247,7 @@ const ProductDetail = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                   <div className="flex items-center gap-2">
                     <Truck className="h-4 w-4 text-primary" />
-                    <span>Free shipping over $75</span>
+                    <span>Free shipping over ₹2000</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Shield className="h-4 w-4 text-primary" />

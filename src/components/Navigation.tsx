@@ -21,10 +21,10 @@ const Navigation = () => {
 
   const navigationItems = [
     { name: "Shop All", href: "/shop" },
-    { name: "Bath & Body", href: "/shop/bath-and-body" },
     { name: "Skincare", href: "/shop/skincare" },
     { name: "Hair Care", href: "/shop/hair-care" },
-    { name: "Wellness", href: "/shop/wellness" },
+    { name: "Body Care", href: "/shop/bath-and-body" },
+    { name: "Kits & Gifts", href: "/shop/kits-and-gifts" },
     { name: "Beauty Quiz", href: "/style-quiz" },
   ];
 
@@ -34,7 +34,7 @@ const Navigation = () => {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50">
       {/* Top notification bar - full width */}
       <div className="py-2 text-center text-sm bg-gradient-hero text-primary-foreground w-full">
-        Free shipping on orders over $75 • Beauty Quiz: Find your perfect routine
+        Free shipping on orders over ₹2000 • Beauty Quiz: Find your perfect routine
       </div>
       
       <div className="container mx-auto px-4">

@@ -86,7 +86,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div className="flex items-center justify-center gap-3">
               <Truck className="h-5 w-5 text-primary" />
-              <span className="text-sm font-medium">Free Shipping Over $75</span>
+              <span className="text-sm font-medium">Free Shipping Over ₹2000</span>
             </div>
             <div className="flex items-center justify-center gap-3">
               <Shield className="h-5 w-5 text-primary" />

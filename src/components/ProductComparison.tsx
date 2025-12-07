@@ -92,11 +92,11 @@ const ProductComparison = ({ products, onAddProduct, onRemoveProduct, onSwitchTo
                 {/* Price */}
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">
-                    ${product.price}
+                    ₹{product.price}
                   </div>
                   {product.originalPrice && (
                     <div className="text-sm text-muted-foreground line-through">
-                      ${product.originalPrice}
+                      ₹{product.originalPrice}
                     </div>
                   )}
                 </div>

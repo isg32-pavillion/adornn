@@ -7,25 +7,25 @@ import { useShopifyProducts } from "@/hooks/useShopifyProducts";
 import { useWishlist } from "@/contexts/WishlistContext";
 import { useProductReviews } from "@/hooks/useProductReviews";
 
-const Wellness = () => {
+const KitsAndGifts = () => {
   const { toggleWishlist, isWishlisted } = useWishlist();
   const { products, isLoading } = useShopifyProducts();
-  const wellnessProducts = products.filter(product => 
-    product.room.toLowerCase() === "wellness"
+  const kitsProducts = products.filter(product => 
+    product.room.toLowerCase() === "kits" || product.room.toLowerCase() === "gifts" || product.room.toLowerCase() === "wellness"
   );
   
-  const { getProductReviews } = useProductReviews(wellnessProducts.map(p => p.id));
+  const { getProductReviews } = useProductReviews(kitsProducts.map(p => p.id));
 
   return (
     <div className="min-h-screen bg-background">
       <section className="bg-gradient-subtle py-12">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-hero text-primary mb-4">
-            Wellness Collection
+            Kits & Gifts Collection
           </h1>
           <p className="text-subtitle max-w-2xl mx-auto">
-            Holistic wellness from within. Discover therapeutic oils, calming treatments, 
-            and natural remedies for complete mind-body balance.
+            Curated gift sets and complete care kits. Perfect for gifting or treating yourself 
+            to a complete wellness experience.
           </p>
         </div>
       </section>
@@ -35,10 +35,10 @@ const Wellness = () => {
           <div className="text-center py-12">
             <p className="text-muted-foreground">Loading products...</p>
           </div>
-        ) : wellnessProducts.length > 0 ? (
+        ) : kitsProducts.length > 0 ? (
           <>
             <div className="product-grid mb-12">
-              {wellnessProducts.map((product) => (
+              {kitsProducts.map((product) => (
                 <ProductCard 
                   key={product.id} 
                   product={product} 
@@ -56,11 +56,11 @@ const Wellness = () => {
                 </div>
                 
                 <h2 className="font-playfair text-3xl font-medium text-primary mb-4">
-                  Discover Your Wellness Path
+                  Complete Your Gift Collection
                 </h2>
                 
                 <p className="text-muted-foreground mb-8 text-lg">
-                  Find more products perfectly suited for your wellness journey. 
+                  Find more curated gift sets and kits. 
                   Take our beauty quiz to get personalized recommendations.
                 </p>
                 
@@ -92,7 +92,7 @@ const Wellness = () => {
               </h2>
               
               <p className="text-muted-foreground mb-8 text-lg">
-                We're curating the ultimate wellness collection for holistic self-care.
+                We're curating the perfect gift sets and kits for every occasion.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -111,4 +111,4 @@ const Wellness = () => {
   );
 };
 
-export default Wellness;
+export default KitsAndGifts;

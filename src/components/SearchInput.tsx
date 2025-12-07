@@ -133,7 +133,7 @@ const SearchInput = ({
                               }}
                             />
                             <div className="text-xs text-muted-foreground">
-                              ${product.price} • {product.category}
+                              ₹{product.price} • {product.category}
                             </div>
                           </div>
                         </div>

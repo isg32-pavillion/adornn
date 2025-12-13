@@ -58,39 +58,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Team Section */}
-        <div>
-          <h2 className="text-3xl font-semibold text-foreground text-center mb-12">Meet Our Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center">
-              <img 
-                src="/sarah-chen.jpg" 
-                alt="Sarah Chen - Founder & Creative Director" 
-                className="rounded-lg aspect-square object-cover w-full mb-4"
-              />
-              <h3 className="text-lg font-semibold text-foreground">Sarah Chen</h3>
-              <p className="text-muted-foreground">Founder & Creative Director</p>
-            </div>
-            <div className="text-center">
-              <img 
-                src="/marcus-rodriguez.jpg" 
-                alt="Marcus Rodriguez - Head of Product Curation" 
-                className="rounded-lg aspect-square object-cover w-full mb-4"
-              />
-              <h3 className="text-lg font-semibold text-foreground">Marcus Rodriguez</h3>
-              <p className="text-muted-foreground">Head of Product Curation</p>
-            </div>
-            <div className="text-center">
-              <img 
-                src="/emily-watson.jpg" 
-                alt="Emily Watson - Customer Experience Lead" 
-                className="rounded-lg aspect-square object-cover w-full mb-4"
-              />
-              <h3 className="text-lg font-semibold text-foreground">Emily Watson</h3>
-              <p className="text-muted-foreground">Customer Experience Lead</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

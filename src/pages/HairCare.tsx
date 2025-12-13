@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import ProductCard from "@/components/ProductCard";
 import { useShopifyProducts } from "@/hooks/useShopifyProducts";
 import { useWishlist } from "@/contexts/WishlistContext";
-import { useProductReviews } from "@/hooks/useProductReviews";
 
 const HairCare = () => {
   const { toggleWishlist, isWishlisted } = useWishlist();
@@ -13,8 +12,6 @@ const HairCare = () => {
   const hairCareProducts = products.filter(product => 
     product.room.toLowerCase() === "hair care"
   );
-  
-  const { getProductReviews } = useProductReviews(hairCareProducts.map(p => p.id));
 
   return (
     <div className="min-h-screen bg-background">
@@ -42,7 +39,6 @@ const HairCare = () => {
                 <ProductCard 
                   key={product.id} 
                   product={product} 
-                  reviewData={getProductReviews(product.id)}
                   onToggleWishlist={toggleWishlist}
                   isWishlisted={isWishlisted(product.id)}
                 />

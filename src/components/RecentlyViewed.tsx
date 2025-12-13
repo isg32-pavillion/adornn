@@ -4,12 +4,11 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import ProductCard from './ProductCard';
 import { useRecentlyViewed } from '@/hooks/useRecentlyViewed';
 import { useWishlist } from '@/contexts/WishlistContext';
-import { useProductReviews } from '@/hooks/useProductReviews';
+
 
 const RecentlyViewed = () => {
   const { recentlyViewed, clearRecentlyViewed } = useRecentlyViewed();
   const { toggleWishlist, isWishlisted } = useWishlist();
-  const { getProductReviews } = useProductReviews(recentlyViewed.map(p => p.id));
 
   if (recentlyViewed.length === 0) {
     return null;
@@ -40,7 +39,6 @@ const RecentlyViewed = () => {
           <div key={product.id} className="md:flex-shrink-0 md:w-64">
             <ProductCard 
               product={product} 
-              reviewData={getProductReviews(product.id)}
               onToggleWishlist={toggleWishlist}
               isWishlisted={isWishlisted(product.id)}
             />

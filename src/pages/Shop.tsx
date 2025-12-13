@@ -17,7 +17,7 @@ import RecentlyViewed from "@/components/RecentlyViewed";
 import SearchInput from "@/components/SearchInput";
 import { products as mockProducts, getProductsByStyle, Product } from "@/data/products";
 import { useShopifyProducts } from "@/hooks/useShopifyProducts";
-import { useProductReviews } from "@/hooks/useProductReviews";
+
 import { useWishlist } from "@/contexts/WishlistContext";
 import { searchProducts, getSearchStats } from "@/lib/searchUtils";
 import { Link } from "react-router-dom";
@@ -116,14 +116,9 @@ const Shop = () => {
   // Apply advanced filters
   filteredProducts = applyAdvancedFilters(filteredProducts);
 
-  // Get review data for all filtered products
-  const { getProductReviews } = useProductReviews(filteredProducts.map(p => p.id));
 
   // Sort products
   filteredProducts = filteredProducts.sort((a, b) => {
-    const aReviews = getProductReviews(a.id);
-    const bReviews = getProductReviews(b.id);
-    
     switch (sortBy) {
       case "price-asc":
         return a.price - b.price;
@@ -132,9 +127,8 @@ const Shop = () => {
       case "newest":
         return a.isNew ? -1 : 1;
       case "rating":
-        return bReviews.average_rating - aReviews.average_rating;
       case "popular":
-        return bReviews.total_reviews - aReviews.total_reviews;
+        return a.isBestseller ? -1 : 1;
       default:
         return a.isBestseller ? -1 : 1;
     }
@@ -331,7 +325,6 @@ const Shop = () => {
                 <ProductCard 
                   key={product.id} 
                   product={product} 
-                  reviewData={getProductReviews(product.id)}
                   onToggleWishlist={toggleWishlist}
                   isWishlisted={isWishlisted(product.id)}
                 />
@@ -374,7 +367,6 @@ const Shop = () => {
                     <ProductCard 
                       key={product.id} 
                       product={product} 
-                      reviewData={getProductReviews(product.id)}
                       onToggleWishlist={toggleWishlist}
                       isWishlisted={isWishlisted(product.id)}
                     />

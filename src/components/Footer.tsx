@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-foreground">Adornn</h3>
+            <h3 className="text-lg font-semibold text-foreground">Adornn Herbal</h3>
             <p className="text-sm text-muted-foreground">
               Premium body care products for radiant skin and wellness. Nourish your body with our expertly curated collection.
             </p>
@@ -78,7 +78,7 @@ const Footer = () => {
         <Separator className="my-8" />
         
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-sm text-muted-foreground">© 2025 Adornn. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground">© 2025 Adornn Herbal. All rights reserved.</p>
           <div className="flex space-x-6">
             <Link to="/privacy-policy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Privacy Policy

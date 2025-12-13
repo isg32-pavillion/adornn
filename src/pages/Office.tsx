@@ -5,20 +5,15 @@ import { Card, CardContent } from "@/components/ui/card";
 import ProductCard from "@/components/ProductCard";
 import { products } from "@/data/products";
 import { useWishlist } from "@/contexts/WishlistContext";
-import { useProductReviews } from "@/hooks/useProductReviews";
 
 const Office = () => {
   const { toggleWishlist, isWishlisted } = useWishlist();
   const officeProducts = products.filter(product => 
     product.room.toLowerCase() === "office"
   );
-  
-  // Get review data for office products
-  const { getProductReviews } = useProductReviews(officeProducts.map(p => p.id));
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Page Header */}
       <section className="bg-gradient-subtle py-12">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-hero text-primary mb-4">
@@ -34,20 +29,17 @@ const Office = () => {
       <div className="container mx-auto px-4 py-16">
         {officeProducts.length > 0 ? (
           <>
-            {/* Products Grid */}
             <div className="product-grid mb-12">
               {officeProducts.map((product) => (
                 <ProductCard 
                   key={product.id} 
                   product={product} 
-                  reviewData={getProductReviews(product.id)}
                   onToggleWishlist={toggleWishlist}
                   isWishlisted={isWishlisted(product.id)}
                 />
               ))}
             </div>
 
-            {/* CTA Section */}
             <Card className="card-warm max-w-2xl mx-auto">
               <CardContent className="text-center p-12">
                 <div className="w-20 h-20 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-6">

@@ -1,4 +1,4 @@
-import { Heart, Star } from "lucide-react";
+import { Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -7,30 +7,21 @@ import { useCart } from "@/contexts/CartContext";
 import { useToast } from "@/hooks/use-toast";
 import LazyImage from "@/components/LazyImage";
 import type { Product } from "@/data/products";
-import { ProductReviewSummary } from "@/hooks/useProductReviews";
+
 
 interface ProductCardProps {
   product: Product;
-  reviewData?: ProductReviewSummary;
   onToggleWishlist?: (productId: string) => void;
   isWishlisted?: boolean;
 }
 
 const ProductCard = ({ 
   product, 
-  reviewData,
   onToggleWishlist, 
   isWishlisted = false
 }: ProductCardProps) => {
   const { addItem } = useCart();
   const { toast } = useToast();
-
-  // Default to fallback data if no reviewData provided
-  const actualReviewData = reviewData || {
-    product_id: product.id,
-    average_rating: 0,
-    total_reviews: 0
-  };
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -115,24 +106,6 @@ const ProductCard = ({
             </h3>
           </Link>
 
-          {/* Rating */}
-          <div className="flex items-center gap-1">
-            <div className="flex">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className={`h-3 w-3 ${
-                    i < Math.floor(actualReviewData.average_rating)
-                      ? "fill-primary text-primary"
-                      : "text-muted-foreground/30"
-                  }`}
-                />
-              ))}
-            </div>
-            <span className="text-xs text-muted-foreground">
-              {actualReviewData.total_reviews > 0 ? actualReviewData.average_rating.toFixed(1) : '0.0'} ({actualReviewData.total_reviews})
-            </span>
-          </div>
 
           {/* Price */}
           <div className="flex items-center gap-2">

@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import ProductCard from "@/components/ProductCard";
 import { useShopifyProducts } from "@/hooks/useShopifyProducts";
 import { useWishlist } from "@/contexts/WishlistContext";
-import { useProductReviews } from "@/hooks/useProductReviews";
 
 const KitsAndGifts = () => {
   const { toggleWishlist, isWishlisted } = useWishlist();
@@ -13,8 +12,6 @@ const KitsAndGifts = () => {
   const kitsProducts = products.filter(product => 
     product.room.toLowerCase() === "kits" || product.room.toLowerCase() === "gifts" || product.room.toLowerCase() === "wellness"
   );
-  
-  const { getProductReviews } = useProductReviews(kitsProducts.map(p => p.id));
 
   return (
     <div className="min-h-screen bg-background">
@@ -42,7 +39,6 @@ const KitsAndGifts = () => {
                 <ProductCard 
                   key={product.id} 
                   product={product} 
-                  reviewData={getProductReviews(product.id)}
                   onToggleWishlist={toggleWishlist}
                   isWishlisted={isWishlisted(product.id)}
                 />

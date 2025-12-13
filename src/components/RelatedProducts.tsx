@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import ProductCard from "@/components/ProductCard";
 import { Product } from "@/data/products";
 import { useWishlist } from '@/contexts/WishlistContext';
-import { useProductReviews } from '@/hooks/useProductReviews';
+
 
 interface RelatedProductsProps {
   products: Product[];
@@ -13,7 +13,6 @@ interface RelatedProductsProps {
 
 const RelatedProducts = ({ products, currentProduct }: RelatedProductsProps) => {
   const { toggleWishlist, isWishlisted } = useWishlist();
-  const { getProductReviews } = useProductReviews(products.map(p => p.id));
   
   if (products.length === 0) return null;
 
@@ -42,7 +41,6 @@ const RelatedProducts = ({ products, currentProduct }: RelatedProductsProps) => 
           <ProductCard 
             key={product.id} 
             product={product} 
-            reviewData={getProductReviews(product.id)}
             onToggleWishlist={toggleWishlist}
             isWishlisted={isWishlisted(product.id)}
           />

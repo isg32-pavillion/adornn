@@ -1,4 +1,4 @@
-import { ArrowRight, Heart, Star, Truck, Shield, RotateCcw, Bath, Sparkles, Flower2, Leaf, Award, CheckCircle2, Droplets, Sprout } from "lucide-react";
+import { ArrowRight, Bath, Sparkles, Flower2, Leaf, Award, CheckCircle2, Droplets, Sprout } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,7 +7,7 @@ import ProductCard from "@/components/ProductCard";
 import { products as mockProducts, collections } from "@/data/products";
 import { useShopifyProducts } from "@/hooks/useShopifyProducts";
 import { useWishlist } from "@/contexts/WishlistContext";
-import { useProductReviews } from "@/hooks/useProductReviews";
+
 import heroImage from "@/assets/hero-body-care.jpg";
 
 const Index = () => {
@@ -26,9 +26,6 @@ const Index = () => {
     ? shopifyProducts.slice(0, 4)
     : products.filter(p => p.isBestseller);
   
-  // Get review data for all products displayed on the page
-  const allDisplayedProducts = [...featuredProducts, ...newArrivals];
-  const { getProductReviews } = useProductReviews(allDisplayedProducts.map(p => p.id));
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -80,25 +77,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Bar */}
-      <section className="bg-secondary/30 py-6">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="flex items-center justify-center gap-3">
-              <Truck className="h-5 w-5 text-primary" />
-              <span className="text-sm font-medium">Free Shipping Over ₹2000</span>
-            </div>
-            <div className="flex items-center justify-center gap-3">
-              <Shield className="h-5 w-5 text-primary" />
-              <span className="text-sm font-medium">30-Day Returns</span>
-            </div>
-            <div className="flex items-center justify-center gap-3">
-              <Heart className="h-5 w-5 text-primary" />
-              <span className="text-sm font-medium">Dermatologist Tested</span>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Featured Products */}
       <section className="py-16">
@@ -126,7 +104,6 @@ const Index = () => {
                 <ProductCard 
                   key={product.id} 
                   product={product} 
-                  reviewData={getProductReviews(product.id)}
                   onToggleWishlist={toggleWishlist}
                   isWishlisted={isWishlisted(product.id)}
                 />
@@ -199,7 +176,6 @@ const Index = () => {
                 <ProductCard 
                   key={product.id} 
                   product={product} 
-                  reviewData={getProductReviews(product.id)}
                   onToggleWishlist={toggleWishlist}
                   isWishlisted={isWishlisted(product.id)}
                 />

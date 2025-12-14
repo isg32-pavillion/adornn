@@ -34,7 +34,7 @@ const Navigation = () => {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50">
       {/* Top notification bar - full width */}
       <div className="py-2 text-center text-sm bg-gradient-hero text-primary-foreground w-full">
-        Free shipping on orders over ₹2000 • Beauty Quiz: Find your perfect routine
+        Free shipping on orders over ₹2000
       </div>
       
       <div className="container mx-auto px-4">

@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Instagram } from "lucide-react";
+import founderImage from "@/assets/founder-sunitta-swaarup.png";
 
 const About = () => {
   return (
@@ -30,9 +31,9 @@ const About = () => {
             </div>
           </div>
           <img 
-            src="/team-photo.jpg" 
-            alt="Adornn Herbals natural products and ingredients" 
-            className="rounded-lg aspect-square object-cover w-full"
+            src={founderImage} 
+            alt="Ms. Sunitta Swaarup, Founder of Adornn Herbals" 
+            className="rounded-lg aspect-[3/4] object-cover w-full"
           />
         </div>
 
@@ -78,55 +79,43 @@ const About = () => {
         {/* Contact Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-semibold text-foreground text-center mb-12">Get In Touch</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Address</h3>
-                  <p className="text-muted-foreground">188 C, Sec-10, Vasundhara, Ghaziabad</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Call / WhatsApp</h3>
-                  <p className="text-muted-foreground">+91 99710 08064 | +91 82874 21522</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                  <a href="mailto:adornnherbal@gmail.com" className="text-primary hover:underline">
-                    adornnherbal@gmail.com
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Instagram className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1">Instagram</h3>
-                  <a 
-                    href="https://instagram.com/adornnherbal" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline"
-                  >
-                    @adornnherbal
-                  </a>
-                </div>
+          <div className="space-y-6">
+            <div className="flex items-start gap-4">
+              <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Address</h3>
+                <p className="text-muted-foreground">188 C, Sec-10, Vasundhara, Ghaziabad</p>
               </div>
             </div>
-            <div className="flex items-center justify-center">
-              <a 
-                href="https://www.adornnherbal.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-              >
-                Visit Our Website
-              </a>
+            <div className="flex items-start gap-4">
+              <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Call / WhatsApp</h3>
+                <p className="text-muted-foreground">+91 99710 08064 | +91 82874 21522</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Email</h3>
+                <a href="mailto:adornnherbal@gmail.com" className="text-primary hover:underline">
+                  adornnherbal@gmail.com
+                </a>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <Instagram className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+              <div>
+                <h3 className="font-semibold text-foreground mb-1">Instagram</h3>
+                <a 
+                  href="https://instagram.com/adornnherbal" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  @adornnherbal
+                </a>
+              </div>
             </div>
           </div>
         </div>

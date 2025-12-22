@@ -39,7 +39,7 @@ const ProductCard = ({
           <LazyImage
             src={product.image}
             alt={product.name}
-            className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-64 group-hover:scale-105 transition-transform duration-300"
           />
         
         {/* Badges */}

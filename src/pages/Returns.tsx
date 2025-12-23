@@ -110,10 +110,10 @@ const Returns = () => {
               <CardContent className="pt-6">
                 <h3 className="font-medium text-foreground mb-2">Return Policy</h3>
                 <ul className="space-y-1 text-sm text-muted-foreground">
-                  <li>• 30-day return window</li>
-                  <li>• Items must be unused</li>
+                  <li>• 7-day return window</li>
+                  <li>• Products must be unopened/unused</li>
                   <li>• Original packaging required</li>
-                  <li>• Free return shipping</li>
+                  <li>• Contact us via WhatsApp or Email</li>
                 </ul>
               </CardContent>
             </Card>
@@ -155,7 +155,7 @@ const Returns = () => {
                       <Label htmlFor="orderNumber">Order Number *</Label>
                       <Input
                         id="orderNumber"
-                        placeholder="e.g. HL12345678"
+                        placeholder="e.g. AH12345678"
                         value={formData.orderNumber}
                         onChange={(e) => handleChange("orderNumber", e.target.value)}
                         required
@@ -178,7 +178,7 @@ const Returns = () => {
                     <Label htmlFor="itemName">Item Name *</Label>
                     <Input
                       id="itemName"
-                      placeholder="e.g. Modern Accent Chair - Navy"
+                      placeholder="e.g. Herbaura Herbal Shampoo 300ml"
                       value={formData.itemName}
                       onChange={(e) => handleChange("itemName", e.target.value)}
                       required

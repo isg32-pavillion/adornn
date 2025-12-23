@@ -5,7 +5,7 @@ const TermsOfService = () => {
     {
       title: "Acceptance of Terms",
       content: [
-        "By accessing and using the Havenly Home website and services, you agree to be bound by these Terms of Service and all applicable laws and regulations.",
+        "By accessing and using the Adornn Herbals website and services, you agree to be bound by these Terms of Service and all applicable laws and regulations.",
         "If you do not agree with any part of these terms, you may not use our services.",
         "We reserve the right to modify these terms at any time, and your continued use of our services constitutes acceptance of any changes."
       ]
@@ -25,35 +25,44 @@ const TermsOfService = () => {
         "All product descriptions, images, and specifications are provided for informational purposes and may not be completely accurate.",
         "Prices are subject to change without notice, but price changes will not affect orders already placed.",
         "We reserve the right to limit quantities, refuse orders, or discontinue products at our discretion.",
-        "All sales are in US dollars, and applicable taxes will be added to orders where required by law."
+        "All sales are in Indian Rupees (INR), and applicable taxes will be added to orders where required by law."
       ]
     },
     {
       title: "Orders and Payment",
       content: [
         "Placing an order constitutes an offer to purchase products subject to these terms.",
-        "We reserve the right to accept or decline your order for any reason, including product availability and credit verification.",
-        "Payment is due at the time of order, and we accept major credit cards, PayPal, and other approved payment methods.",
+        "We reserve the right to accept or decline your order for any reason, including product availability and payment verification.",
+        "Payment is due at the time of order, and we accept major credit/debit cards, UPI, net banking, and other approved payment methods.",
         "You authorize us to charge your chosen payment method for the total amount of your order, including applicable taxes and shipping."
       ]
     },
     {
       title: "Shipping and Delivery",
       content: [
-        "We will make reasonable efforts to ship orders within the timeframes specified, but delivery dates are estimates only.",
-        "Risk of loss and title for products pass to you upon delivery to the shipping carrier.",
+        "We ship across India and will make reasonable efforts to ship orders within the timeframes specified.",
+        "Delivery dates are estimates only and may vary based on location and circumstances.",
         "Shipping costs are calculated based on weight, dimensions, destination, and selected shipping method.",
+        "Free shipping is available on orders above ₹2500.",
         "We are not responsible for delays caused by shipping carriers, weather, or other circumstances beyond our control."
       ]
     },
     {
       title: "Returns and Refunds",
       content: [
-        "Returns must be initiated within 30 days of delivery and items must be in original condition with tags attached.",
-        "Custom, personalized, or clearance items cannot be returned unless defective.",
-        "Customers are responsible for return shipping costs unless the item was damaged or defective upon arrival.",
-        "Refunds will be processed to the original payment method within 5-7 business days of receiving the returned item.",
-        "Restocking fees may apply to certain products as specified in our return policy."
+        "Returns must be initiated within 7 days of delivery and products must be unopened and unused.",
+        "Products that have been opened or used cannot be returned unless defective.",
+        "Contact us via email or WhatsApp to initiate a return request.",
+        "Refunds will be processed to the original payment method within 5-7 business days of receiving the returned item."
+      ]
+    },
+    {
+      title: "Product Information",
+      content: [
+        "Our products are 100% herbal and made with authentic Ayurvedic formulations.",
+        "While our products are free from harmful chemicals, we recommend performing a patch test before first use.",
+        "Individual results may vary. Product claims are based on traditional Ayurvedic knowledge and customer testimonials.",
+        "Consult a healthcare professional if you have specific skin or hair concerns before using our products."
       ]
     },
     {
@@ -61,7 +70,7 @@ const TermsOfService = () => {
       content: [
         "All content on our website, including text, images, logos, and designs, is protected by copyright and other intellectual property laws.",
         "You may not reproduce, distribute, or create derivative works from our content without written permission.",
-        "Product images and descriptions are provided by manufacturers and suppliers and may be subject to their own copyright restrictions.",
+        "The Adornn Herbals name, logo, and product names are trademarks of Adornn Herbals.",
         "Any feedback or suggestions you provide may be used by us without compensation or attribution."
       ]
     },
@@ -70,24 +79,14 @@ const TermsOfService = () => {
       content: [
         "Our liability for any claim related to products or services is limited to the purchase price of the specific product or service.",
         "We are not liable for indirect, incidental, consequential, or punitive damages arising from your use of our services.",
-        "Some jurisdictions do not allow limitations on liability, so these limitations may not apply to you.",
-        "Our total liability to you for all claims will not exceed the amount you paid for products or services in the 12 months preceding the claim."
-      ]
-    },
-    {
-      title: "Indemnification",
-      content: [
-        "You agree to indemnify and hold us harmless from any claims, damages, or expenses arising from your use of our services or violation of these terms.",
-        "This includes reasonable attorney fees and costs incurred in defending against such claims.",
-        "We reserve the right to assume exclusive defense and control of any matter subject to indemnification by you."
+        "Some jurisdictions do not allow limitations on liability, so these limitations may not apply to you."
       ]
     },
     {
       title: "Governing Law and Disputes",
       content: [
-        "These terms are governed by the laws of [State/Province] without regard to conflict of law principles.",
-        "Any disputes arising from these terms or your use of our services will be resolved through binding arbitration or in the courts of [Jurisdiction].",
-        "You waive any right to participate in class action lawsuits or class-wide arbitration against us.",
+        "These terms are governed by the laws of India without regard to conflict of law principles.",
+        "Any disputes arising from these terms or your use of our services will be subject to the exclusive jurisdiction of the courts in Ghaziabad, Uttar Pradesh, India.",
         "If any provision of these terms is found to be unenforceable, the remaining provisions will continue in full force and effect."
       ]
     },
@@ -95,9 +94,9 @@ const TermsOfService = () => {
       title: "Contact Information",
       content: [
         "If you have questions about these Terms of Service, please contact us:",
-        "Email: legal@havenlyhome.com",
-        "Phone: 1-800-HAVENLY (1-800-428-3659)",
-        "Mail: Havenly Home Legal Department, [Company Address]"
+        "Email: adornnherbal@gmail.com",
+        "Phone/WhatsApp: +91 99710 08064 | +91 82874 21522",
+        "Address: 188 C, Sec-10, Vasundhara, Ghaziabad"
       ]
     }
   ];
@@ -109,7 +108,7 @@ const TermsOfService = () => {
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-foreground mb-6">Terms of Service</h1>
           <p className="text-xl text-muted-foreground mb-8">
-            These terms govern your use of Havenly Home's website and services. Please read them carefully.
+            These terms govern your use of Adornn Herbals website and services. Please read them carefully.
           </p>
           <p className="text-sm text-muted-foreground">
             Effective Date: January 1, 2025 | Last Updated: January 1, 2025
@@ -145,17 +144,17 @@ const TermsOfService = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="mailto:legal@havenlyhome.com" 
+                href="mailto:adornnherbal@gmail.com" 
                 className="text-primary hover:text-primary/80 transition-colors"
               >
-                legal@havenlyhome.com
+                adornnherbal@gmail.com
               </a>
               <span className="hidden sm:inline text-muted-foreground">•</span>
               <a 
-                href="tel:1-800-428-3659" 
+                href="tel:+919971008064" 
                 className="text-primary hover:text-primary/80 transition-colors"
               >
-                1-800-HAVENLY
+                +91 99710 08064
               </a>
             </div>
           </CardContent>

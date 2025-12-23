@@ -73,9 +73,9 @@ const PrivacyPolicy = () => {
       title: "Contact Us",
       content: [
         "If you have questions about this Privacy Policy or our data practices, please contact us:",
-        "Email: privacy@havenlyhome.com",
-        "Phone: 1-800-HAVENLY (1-800-428-3659)",
-        "Mail: Havenly Home Privacy Team, [Company Address]"
+        "Email: adornnherbal@gmail.com",
+        "Phone/WhatsApp: +91 99710 08064 | +91 82874 21522",
+        "Address: 188 C, Sec-10, Vasundhara, Ghaziabad"
       ]
     }
   ];
@@ -123,17 +123,17 @@ const PrivacyPolicy = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="mailto:privacy@havenlyhome.com" 
+                href="mailto:adornnherbal@gmail.com" 
                 className="text-primary hover:text-primary/80 transition-colors"
               >
-                privacy@havenlyhome.com
+                adornnherbal@gmail.com
               </a>
               <span className="hidden sm:inline text-muted-foreground">•</span>
               <a 
-                href="tel:1-800-428-3659" 
+                href="tel:+919971008064" 
                 className="text-primary hover:text-primary/80 transition-colors"
               >
-                1-800-HAVENLY
+                +91 99710 08064
               </a>
             </div>
           </CardContent>

@@ -23,7 +23,7 @@ const About = () => {
                 Founded in 2021 by <strong className="text-foreground">Ms. Sunitta Swaarup</strong>, Adornn Herbals was born from a deeply personal journey. Between 2012 and 2014, Sunitta faced significant health challenges that led her to discover the transformative power of naturopathy and Ayurvedic techniques.
               </p>
               <p>
-                Guided by the philosophy that <em>"One can do anything if they want"</em>, she dedicated herself to creating products that harness nature's healing wisdom. Today, Adornn Herbals offers 100% herbal and natural products, free from harmful chemicals and toxins.
+                Guided by the philosophy that <em>"One can do anything if they want"</em>, she dedicated herself to creating products that harness nature's healing wisdom. Today, Adornn Herbals offers 100% herbal and authentic products, free from harmful chemicals and toxins.
               </p>
               <p>
                 Every product is backed by years of dedicated research and thoroughly tested for effectiveness, rooted in traditional Ayurvedic methods including the use of cold-pressed oils.
@@ -44,7 +44,7 @@ const About = () => {
             <div className="text-center p-6 bg-muted/50 rounded-lg">
               <h3 className="text-xl font-semibold text-foreground mb-4">100% Herbal</h3>
               <p className="text-muted-foreground">
-                All our products are made with pure, natural herbal ingredients sourced with care.
+                All our products are made with pure, authentic herbal ingredients sourced with care.
               </p>
             </div>
             <div className="text-center p-6 bg-muted/50 rounded-lg">

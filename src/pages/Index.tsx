@@ -57,7 +57,7 @@ const Index = () => {
             Where Nature Meets Nurture
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8 animate-fade-in">
-            Discover 100% herbal and natural products crafted with traditional Ayurvedic wisdom. 
+            Discover 100% herbal and authentic products crafted with traditional Ayurvedic wisdom. 
             Free from harmful chemicals, backed by research, and made with love.
           </p>
           
@@ -202,7 +202,7 @@ const Index = () => {
               <div className="w-20 h-20 bg-gradient-hero rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Sprout className="h-10 w-10 text-primary-foreground" />
               </div>
-              <h3 className="font-semibold text-lg text-foreground mb-2">100% Natural Ingredients</h3>
+              <h3 className="font-semibold text-lg text-foreground mb-2">100% Authentic Ingredients</h3>
               <p className="text-sm text-muted-foreground">
                 Crafted with pure herbal extracts and traditional Ayurvedic formulations, free from harmful chemicals
               </p>

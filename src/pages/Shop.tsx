@@ -174,11 +174,11 @@ const Shop = () => {
       <section className="bg-gradient-subtle py-12">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-hero text-primary mb-4">
-            Shop Home Decor
+            Shop All Products
           </h1>
           <p className="text-subtitle max-w-2xl mx-auto">
-            Discover beautiful, budget-friendly pieces to transform your space. 
-            From statement lighting to cozy textiles, find everything you need.
+            Discover 100% herbal and authentic Ayurvedic products for your skin, hair, and body. 
+            Crafted with traditional wisdom, backed by research.
           </p>
         </div>
       </section>

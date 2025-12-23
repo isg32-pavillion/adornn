@@ -22,7 +22,7 @@ const Skincare = () => {
           </h1>
           <p className="text-subtitle max-w-2xl mx-auto">
             Radiant skin starts here. Discover Ayurvedic serums, nourishing face packs, 
-            and treatments that reveal your natural glow.
+            and treatments that reveal your authentic glow.
           </p>
         </div>
       </section>

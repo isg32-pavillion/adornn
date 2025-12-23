@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Separator } from "@/components/ui/separator";
-import { Instagram, PinIcon, Mail } from "lucide-react";
+import { Instagram, Mail } from "lucide-react";
 const Footer = () => {
   return <footer className="bg-muted/30 border-t border-border mt-16">
       <div className="container mx-auto px-4 py-12">
@@ -23,8 +23,8 @@ const Footer = () => {
               <Link to="/faq" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 FAQ
               </Link>
-              <Link to="/shipping" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Shipping Info
+              <Link to="/returns" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Returns
               </Link>
             </nav>
           </div>
@@ -36,9 +36,6 @@ const Footer = () => {
               <Link to="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 About Us
               </Link>
-              <Link to="/care" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Product Care
-              </Link>
             </nav>
           </div>
 
@@ -47,7 +44,7 @@ const Footer = () => {
             <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide">Connect</h4>
             <nav className="flex flex-row space-x-4">
               <a 
-                href="https://instagram.com/havenlyhome" 
+                href="https://instagram.com/adornnherbal" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -56,18 +53,9 @@ const Footer = () => {
                 <Instagram size={20} />
               </a>
               <a 
-                href="https://pinterest.com/havenlyhome" 
-                target="_blank" 
-                rel="noopener noreferrer"
+                href="mailto:adornnherbal@gmail.com" 
                 className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="Follow us on Pinterest"
-              >
-                <PinIcon size={20} />
-              </a>
-              <a 
-                href="mailto:newsletter@havenlyhome.com" 
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="Subscribe to our newsletter"
+                aria-label="Email us"
               >
                 <Mail size={20} />
               </a>

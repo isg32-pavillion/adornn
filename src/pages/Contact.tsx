@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -64,15 +64,17 @@ const Contact = () => {
                   <Mail className="h-5 w-5 text-primary mt-1" />
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <p className="text-muted-foreground">help@havenlyhome.com</p>
+                    <a href="mailto:adornnherbal@gmail.com" className="text-muted-foreground hover:text-primary">
+                      adornnherbal@gmail.com
+                    </a>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-3">
                   <Phone className="h-5 w-5 text-primary mt-1" />
                   <div>
-                    <p className="font-medium text-foreground">Phone</p>
-                    <p className="text-muted-foreground">1-800-HAVENLY</p>
+                    <p className="font-medium text-foreground">Call / WhatsApp</p>
+                    <p className="text-muted-foreground">+91 99710 08064 | +91 82874 21522</p>
                   </div>
                 </div>
                 
@@ -81,19 +83,7 @@ const Contact = () => {
                   <div>
                     <p className="font-medium text-foreground">Address</p>
                     <p className="text-muted-foreground">
-                      123 Design Street<br />
-                      San Francisco, CA 94102
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-3">
-                  <Clock className="h-5 w-5 text-primary mt-1" />
-                  <div>
-                    <p className="font-medium text-foreground">Hours</p>
-                    <p className="text-muted-foreground">
-                      Mon - Fri: 9am - 6pm PST<br />
-                      Weekend: 10am - 4pm PST
+                      188 C, Sec-10, Vasundhara, Ghaziabad
                     </p>
                   </div>
                 </div>

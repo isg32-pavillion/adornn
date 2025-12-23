@@ -24,9 +24,7 @@ const StyleQuizPage = lazy(() => import("./pages/StyleQuizPage"));
 const ProductDetail = lazy(() => import("./pages/ProductDetail"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
-const Shipping = lazy(() => import("./pages/Shipping"));
 const SizeGuide = lazy(() => import("./pages/SizeGuide"));
-const Care = lazy(() => import("./pages/Care"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const Returns = lazy(() => import("./pages/Returns"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
@@ -85,9 +83,7 @@ const App = () => {
                       <Route path="/product/:id" element={<ProductDetail />} />
                       <Route path="/about" element={<About />} />
                       <Route path="/contact" element={<Contact />} />
-                      <Route path="/shipping" element={<Shipping />} />
                       <Route path="/size-guide" element={<SizeGuide />} />
-                      <Route path="/care" element={<Care />} />
                       <Route path="/faq" element={<FAQ />} />
                       <Route path="/returns" element={<Returns />} />
                       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
